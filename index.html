@@ -6,6 +6,7 @@
 </Header>
 <body>
     <h1>Quick Guide to Semantics</h1>
+    <section class="intro">
         <h2>Contents</h2>
             <ol>
                 <li><a href="#importance">Why semantics are important</a></li>
@@ -13,62 +14,63 @@
                 <li><a href="#classes">How to use classes to aide CSS styling</a></li>
                 <li><a href="#links">Links to useful resources</a></li>
             </ol>
+            <br>
+    </section>
     <section>
         <h2 id="importance">Why semantics are important</h2>
             <p>“Semantic HTML” refers to the idea that all your HTML markup should convey the underlying meaning of your content—not its appearance. 
-            We’ve already been writing semantic HTML (e.g., using <em>strong</em> instead of <em>'b'</em>), but there’s a whole set of elements designed for the 
+            We’ve already been writing semantic HTML (e.g., using <b>&lt;strong&gt;</b> instead of <b>&lt;b&gt;</b>), but there’s a whole set of elements designed for the 
             sole purpose of adding more meaning to the overall layout of a web page. They’re called “sectioning elements”, and they look something like this:</p>
-            <img src="images/html-sectioning-elements.png" alt="sectioning elements">
+            <img src="images/html-sectioning-elements300378.png" alt="sectioning elements">
 
-            <p>Using these as an alternative to <em>'div'</em>elements is an important aspect of modern web development because it makes it easier for search engines, 
+            <p>Using these as an alternative to <b>&lt;div&gt;</b> elements is an important aspect of modern web development because it makes it easier for search engines, 
             screen readers, and other machines to identify the different parts of your website. It also helps you as a developer keep your site organized, which, 
             in turn, makes it easier to maintain.</p>
-            <img src="images/semantic-divvssemantic.png" alt="Sematic versus div usage">
+            <img src="images/semantic-divvssemantic500395.png" alt="Sematic versus div usage">
+            <br>
 
         <h2 id="common_tags">Common semantic tags to use in HTML</h2>
             <table>
-            <tr>
-                <th scope="col">Semantic Markup</th>
-                <th scope="col">Description</th>
-            </tr>
-            <tr>
-                <td><strong>Strong</strong></td>
-                <td>Add explanation</td>
-                </tr>
                 <tr>
-                    <td><em>em</em></td>  
-                    <td>Add explanation</td>
+                    <th scope="col">Semantic Markup</th>
+                    <th scope="col">Description</th>
                 </tr>
-            
-                <tr>
-                    <td><blockquote>blockquote</blockquote></td>
-                    <td>Add explanation</td>
+                <tr class="odd">
+                <td>&lt;Strong&gt;</td>
+                <td>Indicates content has strong importance. Browsers will default to show this in bold</td>
                 </tr>
-                <tr>
-                    <td><q>q</q></td>
-                    <td>Add explanation</td>
+                <tr class="even">
+                    <td>&lt;em&gt;</td>  
+                    <td>Shows emphasis. Usually show in italics</td>
                 </tr>
-                <tr>
-                    <td><cite>cite</cite></td>
-                    <td>Add explanation</td>
+                <tr class="odd">
+                    <td>&lt;blockquotes&gt;</td>
+                    <td>Used for longer quotes</td>
                 </tr>
-                <tr>
-                    <td><address>address</address></td>
-                    <td>Add explanation</td>
+                <tr class="even">
+                    <td>&lt;q&gt;</td>
+                    <td>Used for shorter quotes in a paragraph</td>
+                </tr>
+                <tr class="odd">
+                    <td>&lt;cite&gt;</td>
+                    <td>Used for referencing a piece of work e.g. a book, article etc</td>
+                </tr>
+                <tr class="even">
+                    <td>&lt;address&gt;</td>
+                    <td>Used to indicate contact details</td>
                 </tr>
             </table>
-
             <p>By using semantic tags it allows styles to be applied more simply and logically using CSS.  For example, you could set all
-                    'blockquotes' to the same styling properties (e.g. font, background color, alignment etc) throughout the pages the stylesheet
-                    is linked to. In turn this makes updating much more straightforward to do.</p>
+                    <b>&lt;blockquotes&gt;</b> to the same styling properties (e.g. font, background color, alignment etc) throughout the pages the stylesheet
+                    is linked to. In turn this makes updating much more straightforward to do.</p> 
+            <br>
     </section>
-
     <section>
         <h2 id="classes">How to use classes to aide CSS styling</h2>
-            <p>A second important tip is to use 'classes' with tags where we want to identify and style individual elements.  For example, we may have h2 headings
+            <p>A second important tip is to use 'classes' with tags where we want to identify and style individual elements.  For example, we may have <b>&lt;h2&gt;</b> headings
             that use a common set of styles, however we may want to give each heading a different background color.  In this instance we would create a common style for
-            the shared elements and apply these to the h2 tag, but create a 'class = 'descriptor'' inside the tag as an additional reference point.  We would then add the 
-            background color property and value to the relevant 'class' in the style sheet.</p>
+            the shared elements and apply these to the <b>&lt;h2&gt;</b> tag, but create a <em>class = descriptor</em> inside the tag as an additional reference point.  We would then add the 
+            background color property and value to the relevant <em>'class'</em>in the style sheet.</p>
 
         <p>The three most important selectors to be aware of are:</p>    
         <table>
@@ -76,19 +78,19 @@
                 <th scope="col">Selector</th>
                 <th scope="col">Meaning</th>
             </tr>
-            <tr>
+            <tr class="even">
                 <td>Type selector</td>
                 <td>Matches element name</td>
             </tr>
-            <tr>
+            <tr class="odd">
                 <td>Class selector</td>
                 <td>Matches an element whose class attribute has a value that matches the one specified after the full stop symbol</td>
             </tr>
-            <tr>
+            <tr class="even">
                 <td>ID selector</td>
                 <td>Matches an element whose id attribute has a value that matches the one specified after the hash symbol</td>
             </tr>
-
+            <br>
         </table>
     </section>
     <section>
@@ -98,6 +100,11 @@
                 <li><a href="https://css-tricks.com/semantic-class-names/" target="_blank">Semantic class names</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN developer resource: cascading style sheets</a></li>
             </ul>
+            <br>
+    </section>
+    <section>
+        <h2 class="welldone">Well done, you made it through!!!</h2>
+        <img src="https://media.tenor.com/images/f5e1747d2d7d382fcbc48ae653136703/tenor.gif" alt="Well done">
     </section>
     <address>
         <p>If you have any other tips to share please get in contact with me at <a href = "mailto:matt.caswell@hotmail.com">matt.caswell@hotmail.com</a></p>
